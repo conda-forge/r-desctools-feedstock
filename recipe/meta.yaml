@@ -1,4 +1,4 @@
-{% set version = "0.99.25" %}
+{% set version = "0.99.26" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/DescTools_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/DescTools/DescTools_{{ version }}.tar.gz
-  sha256: 0c9d106bf6b4efbec94386774ecfda966c914ab2a2abf3a3eaaea7fe87fa622e
+  sha256: c06db17865d8901dfcee87195d6acd73a95d29b2c10f9e42a52fe1bfd4ddec2f
 
 build:
   merge_build_host: True  # [win]
