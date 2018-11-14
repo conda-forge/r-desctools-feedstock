@@ -16,9 +16,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  merge_build_host: True  # [win]
   number: 0
-  skip: true  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -36,17 +34,6 @@ requirements:
     - {{ compiler('m2w64_c') }}  # [win]
     - {{ compiler('cxx') }}        # [unix]
     - {{ compiler('m2w64_cxx') }}  # [win]
-  host:
-    - r-base
-    - r-bh
-    - r-mass
-    - r-rcpp >=0.12.10
-    - r-boot
-    - r-expm
-    - r-foreign
-    - r-manipulate
-    - r-mvtnorm
-
   run:
     - r-base
     - r-bh
