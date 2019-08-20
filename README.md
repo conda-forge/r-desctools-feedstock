@@ -43,17 +43,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_r_base3.5.1</td>
+              <td>osx_fortran_compiler_version4r_base3.5.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6030&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-desctools-feedstock?branchName=master&jobName=osx&configuration=osx_r_base3.5.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-desctools-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4r_base3.5.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_r_base3.6</td>
+              <td>osx_fortran_compiler_version4r_base3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6030&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-desctools-feedstock?branchName=master&jobName=osx&configuration=osx_r_base3.6" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-desctools-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4r_base3.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_fortran_compiler_version7r_base3.5.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6030&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-desctools-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7r_base3.5.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_fortran_compiler_version7r_base3.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6030&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-desctools-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7r_base3.6" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -171,10 +185,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
-* [@cbrueffer](https://github.com/cbrueffer/)
 * [@conda-forge/r](https://github.com/conda-forge/r/)
-* [@daler](https://github.com/daler/)
-* [@jdblischak](https://github.com/jdblischak/)
-* [@johanneskoester](https://github.com/johanneskoester/)
 

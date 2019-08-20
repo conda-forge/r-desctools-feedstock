@@ -16,8 +16,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -80,8 +79,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
