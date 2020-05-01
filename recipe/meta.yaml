@@ -41,6 +41,7 @@ requirements:
     - r-boot
     - r-expm
     - r-mvtnorm
+    - r-rstudioapi
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
@@ -50,6 +51,7 @@ requirements:
     - r-boot
     - r-expm
     - r-mvtnorm
+    - r-rstudioapi
 
 test:
   commands:
