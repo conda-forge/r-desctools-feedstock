@@ -44,7 +44,7 @@ requirements:
     - r-rstudioapi
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-exact
     - r-mass
     - r-rcpp >=0.12.10
