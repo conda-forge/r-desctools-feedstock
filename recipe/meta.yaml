@@ -14,7 +14,6 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  skip: true  # [r_base == "3.5.1"]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -36,6 +35,7 @@ requirements:
   host:
     - r-base
     - r-bh
+    - r-exact
     - r-mass
     - r-rcpp >=0.12.10
     - r-boot
@@ -44,8 +44,8 @@ requirements:
     - r-rstudioapi
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
-    - r-bh
+    - {{native}}gcc-libs         # [win]
+    - r-exact
     - r-mass
     - r-rcpp >=0.12.10
     - r-boot
@@ -60,7 +60,7 @@ test:
 
 about:
   home: https://github.com/AndriSignorell/DescTools/
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: A collection of miscellaneous basic statistic functions and convenience wrappers for efficiently describing data. The author's intention was to create a toolbox, which facilitates the (notoriously time consuming) first descriptive tasks in data analysis, consisting of calculating descriptive statistics, drawing
     graphical summaries and reporting the results. The package contains furthermore functions to produce documents using MS Word (or PowerPoint) and functions to import data from Excel. Many of the included functions can be found scattered in other packages and other sources written partly by Titans of R. The reason for
     collecting them here, was primarily to have them consolidated in ONE instead of dozens of packages (which themselves might depend on other packages which are not needed at all), and to provide a common and consistent interface as far as function and arguments naming, NA handling, recycling rules etc. are concerned. Google
