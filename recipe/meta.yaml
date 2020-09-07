@@ -40,6 +40,7 @@ requirements:
     - r-rcpp >=0.12.10
     - r-boot
     - r-expm
+    - r-gld
     - r-mvtnorm
     - r-rstudioapi
   run:
@@ -50,6 +51,7 @@ requirements:
     - r-rcpp >=0.12.10
     - r-boot
     - r-expm
+    - r-gld
     - r-mvtnorm
     - r-rstudioapi
 
