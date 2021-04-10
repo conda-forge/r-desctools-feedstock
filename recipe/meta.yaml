@@ -39,6 +39,7 @@ requirements:
     - r-mass
     - r-rcpp >=0.12.10
     - r-boot
+    - r-data.table
     - r-expm
     - r-gld
     - r-mvtnorm
@@ -46,10 +47,12 @@ requirements:
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
+    #- r-bh
     - r-exact
     - r-mass
     - r-rcpp >=0.12.10
     - r-boot
+    - r-data.table
     - r-expm
     - r-gld
     - r-mvtnorm
