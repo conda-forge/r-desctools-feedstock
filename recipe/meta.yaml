@@ -1,4 +1,4 @@
-{% set version = "0.99.43" %}
+{% set version = "0.99.44" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/DescTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DescTools/DescTools_{{ version }}.tar.gz
-  sha256: 8c3c4e5975428b9f2817907931449cd704d3df0e19e4337010f0dee333e7a4ff
+  sha256: 129d025c0cadcbcb94f65fe14f545131c0113c1abe18724cc00f2a6dae1e9713
 
 build:
   merge_build_host: true  # [win]
