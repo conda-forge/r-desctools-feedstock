@@ -32,6 +32,7 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-bh
@@ -42,7 +43,9 @@ requirements:
     - r-data.table
     - r-expm
     - r-gld
+    - r-httr
     - r-mvtnorm
+    - r-readxl
     - r-rstudioapi
   run:
     - r-base
@@ -55,7 +58,9 @@ requirements:
     - r-data.table
     - r-expm
     - r-gld
+    - r-httr
     - r-mvtnorm
+    - r-readxl
     - r-rstudioapi
 
 test:
