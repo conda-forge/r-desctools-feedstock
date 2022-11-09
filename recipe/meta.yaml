@@ -21,6 +21,19 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-httr                     # [build_platform != target_platform]
+    - r-mass                     # [build_platform != target_platform]
+    - r-rstudioapi               # [build_platform != target_platform]
+    - r-data.table               # [build_platform != target_platform]
+    - r-exact                    # [build_platform != target_platform]
+    - r-readxl                   # [build_platform != target_platform]
+    - r-rcpp                     # [build_platform != target_platform]
+    - r-expm                     # [build_platform != target_platform]
+    - r-gld                      # [build_platform != target_platform]
+    - r-mvtnorm                  # [build_platform != target_platform]
+    - r-boot                     # [build_platform != target_platform]
+    - r-bh                       # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
