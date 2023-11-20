@@ -14,6 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
+  skip: true              # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -21,36 +22,35 @@ build:
 
 requirements:
   build:
-    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
-    - r-httr                     # [build_platform != target_platform]
-    - r-mass                     # [build_platform != target_platform]
-    - r-rstudioapi               # [build_platform != target_platform]
-    - r-data.table               # [build_platform != target_platform]
-    - r-exact                    # [build_platform != target_platform]
-    - r-readxl                   # [build_platform != target_platform]
-    - r-rcpp                     # [build_platform != target_platform]
-    - r-expm                     # [build_platform != target_platform]
-    - r-gld                      # [build_platform != target_platform]
-    - r-mvtnorm                  # [build_platform != target_platform]
-    - r-boot                     # [build_platform != target_platform]
-    - r-bh                       # [build_platform != target_platform]
-    - r-withr                    # [build_platform != target_platform]
+    - cross-r-base {{ r_base }}        # [build_platform != target_platform]
+    - r-boot                           # [build_platform != target_platform]
+    - r-cli                            # [build_platform != target_platform]
+    - r-data.table                     # [build_platform != target_platform]
+    - r-exact                          # [build_platform != target_platform]
+    - r-expm                           # [build_platform != target_platform]
+    - r-gld                            # [build_platform != target_platform]
+    - r-httr                           # [build_platform != target_platform]
+    - r-mass                           # [build_platform != target_platform]
+    - r-mvtnorm                        # [build_platform != target_platform]
+    - r-rcpp >=0.12.10                 # [build_platform != target_platform]
+    - r-readxl                         # [build_platform != target_platform]
+    - r-rstudioapi                     # [build_platform != target_platform]
+    - r-withr                          # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ compiler('fortran') }}        # [not win]
     - {{ compiler('m2w64_fortran') }}  # [win]
-    - {{ posix }}filesystem        # [win]
+    - {{ posix }}filesystem            # [win]
     - {{ posix }}make
-    - {{ posix }}sed               # [win]
-    - {{ posix }}coreutils         # [win]
-    - {{ posix }}zip               # [win]
-    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - {{ posix }}sed                   # [win]
+    - {{ posix }}coreutils             # [win]
+    - {{ posix }}zip                   # [win]
   host:
     - r-base
-    - r-bh
     - r-boot
+    - r-cli
     - r-data.table
     - r-exact
     - r-expm
@@ -65,8 +65,8 @@ requirements:
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-bh
     - r-boot
+    - r-cli
     - r-data.table
     - r-exact
     - r-expm
@@ -85,7 +85,8 @@ test:
     - "\"%R%\" -e \"library('DescTools')\""  # [win]
 
 about:
-  home: https://github.com/AndriSignorell/DescTools/
+  home: https://andrisignorell.github.io/DescTools/
+  dev_url: https://github.com/AndriSignorell/DescTools/
   license: GPL-2.0-or-later
   summary: A collection of miscellaneous basic statistic functions and convenience wrappers for efficiently describing data. The author's intention was to create a toolbox, which facilitates the (notoriously time consuming) first descriptive tasks in data analysis, consisting of calculating descriptive statistics, drawing
     graphical summaries and reporting the results. The package contains furthermore functions to produce documents using MS Word (or PowerPoint) and functions to import data from Excel. Many of the included functions can be found scattered in other packages and other sources written partly by Titans of R. The reason for
