@@ -48,7 +48,7 @@ requirements:
     - {{ posix }}coreutils             # [win]
     - {{ posix }}zip                   # [win]
   host:
-    - r-base >=4.3
+    - r-base
     - r-boot
     - r-cli
     - r-data.table
@@ -63,7 +63,7 @@ requirements:
     - r-rstudioapi
     - r-withr
   run:
-    - r-base >=4.3
+    - r-base
     - {{ native }}gcc-libs         # [win]
     - r-boot
     - r-cli
