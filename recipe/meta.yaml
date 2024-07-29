@@ -1,4 +1,4 @@
-{% set version = "0.99.54" %}
+{% set version = "0.99.55" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/DescTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DescTools/DescTools_{{ version }}.tar.gz
-  sha256: 470a16405d52d7e8595ac025a0d2bf50b78edaebe83af358903e201168a80b9b
+  sha256: e5d560826eddb42589f8f3151584c76106aa0af047a0c73e1657d069808baf1d
 
 build:
   merge_build_host: true  # [win]
@@ -37,7 +37,9 @@ requirements:
     - r-rstudioapi                     # [build_platform != target_platform]
     - r-withr                          # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ compiler('fortran') }}        # [not win]
