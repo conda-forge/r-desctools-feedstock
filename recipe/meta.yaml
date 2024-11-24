@@ -12,8 +12,6 @@ source:
   sha256: 62907753c4d3efe4ef6990f0e381dcac24c00956531f3d52b337896cf827e8b4
 
 build:
-  # Checking windows to see if it passes. Uncomment the line if it fails.
-  # skip: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -22,16 +20,17 @@ build:
 requirements:
   build:
     - cross-r-base {{ r_base }}        # [build_platform != target_platform]
+    - r-exact                          # [build_platform != target_platform]
+    - r-mass                           # [build_platform != target_platform]
+    - r-rcpp                           # [build_platform != target_platform]
     - r-boot                           # [build_platform != target_platform]
     - r-cli                            # [build_platform != target_platform]
     - r-data.table                     # [build_platform != target_platform]
-    - r-exact                          # [build_platform != target_platform]
     - r-expm                           # [build_platform != target_platform]
     - r-gld                            # [build_platform != target_platform]
+    - r-haven                          # [build_platform != target_platform]
     - r-httr                           # [build_platform != target_platform]
-    - r-mass                           # [build_platform != target_platform]
     - r-mvtnorm                        # [build_platform != target_platform]
-    - r-rcpp >=0.12.10                 # [build_platform != target_platform]
     - r-readxl                         # [build_platform != target_platform]
     - r-rstudioapi                     # [build_platform != target_platform]
     - r-withr                          # [build_platform != target_platform]
@@ -50,31 +49,33 @@ requirements:
     - {{ posix }}zip                   # [win]
   host:
     - r-base
+    - r-exact
+    - r-mass
+    - r-rcpp >=0.12.10
     - r-boot
     - r-cli
     - r-data.table
-    - r-exact
     - r-expm
     - r-gld
+    - r-haven
     - r-httr
-    - r-mass
     - r-mvtnorm
-    - r-rcpp >=0.12.10
     - r-readxl
     - r-rstudioapi
     - r-withr
   run:
     - r-base
+    - r-exact
+    - r-mass
+    - r-rcpp >=0.12.10
     - r-boot
     - r-cli
     - r-data.table
-    - r-exact
     - r-expm
     - r-gld
+    - r-haven
     - r-httr
-    - r-mass
     - r-mvtnorm
-    - r-rcpp >=0.12.10
     - r-readxl
     - r-rstudioapi
     - r-withr
