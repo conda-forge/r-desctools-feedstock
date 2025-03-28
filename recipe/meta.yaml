@@ -1,4 +1,4 @@
-{% set version = "0.99.59" %}
+{% set version = "0.99.60" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/DescTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DescTools/DescTools_{{ version }}.tar.gz
-  sha256: 79529631edbcf36d5cd8ee98812c0717454084a40c05b7c33963e715c8413cf6
+  sha256: 2c20d8579ddc6278e1069ad6d546a760f62d9e8dcc956ce09f58afadb573bcbc
 
 build:
   number: 0
