@@ -1,4 +1,4 @@
-{% set version = "0.99.59" %}
+{% set version = "0.99.60" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/DescTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DescTools/DescTools_{{ version }}.tar.gz
-  sha256: 79529631edbcf36d5cd8ee98812c0717454084a40c05b7c33963e715c8413cf6
+  sha256: 2c20d8579ddc6278e1069ad6d546a760f62d9e8dcc956ce09f58afadb573bcbc
 
 build:
   number: 0
@@ -27,10 +27,12 @@ requirements:
     - r-cli                            # [build_platform != target_platform]
     - r-data.table                     # [build_platform != target_platform]
     - r-expm                           # [build_platform != target_platform]
+    - r-fs                             # [build_platform != target_platform]
     - r-gld                            # [build_platform != target_platform]
     - r-haven                          # [build_platform != target_platform]
     - r-httr                           # [build_platform != target_platform]
     - r-mvtnorm                        # [build_platform != target_platform]
+    - r-readr                          # [build_platform != target_platform]
     - r-readxl                         # [build_platform != target_platform]
     - r-rstudioapi                     # [build_platform != target_platform]
     - r-withr                          # [build_platform != target_platform]
@@ -56,10 +58,12 @@ requirements:
     - r-cli
     - r-data.table
     - r-expm
+    - r-fs
     - r-gld
     - r-haven
     - r-httr
     - r-mvtnorm
+    - r-readr
     - r-readxl
     - r-rstudioapi
     - r-withr
@@ -72,10 +76,12 @@ requirements:
     - r-cli
     - r-data.table
     - r-expm
+    - r-fs
     - r-gld
     - r-haven
     - r-httr
     - r-mvtnorm
+    - r-readr
     - r-readxl
     - r-rstudioapi
     - r-withr
