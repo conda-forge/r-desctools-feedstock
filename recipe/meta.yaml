@@ -27,10 +27,12 @@ requirements:
     - r-cli                            # [build_platform != target_platform]
     - r-data.table                     # [build_platform != target_platform]
     - r-expm                           # [build_platform != target_platform]
+    - r-fs                             # [build_platform != target_platform]
     - r-gld                            # [build_platform != target_platform]
     - r-haven                          # [build_platform != target_platform]
     - r-httr                           # [build_platform != target_platform]
     - r-mvtnorm                        # [build_platform != target_platform]
+    - r-readr                          # [build_platform != target_platform]
     - r-readxl                         # [build_platform != target_platform]
     - r-rstudioapi                     # [build_platform != target_platform]
     - r-withr                          # [build_platform != target_platform]
@@ -56,10 +58,12 @@ requirements:
     - r-cli
     - r-data.table
     - r-expm
+    - r-fs
     - r-gld
     - r-haven
     - r-httr
     - r-mvtnorm
+    - r-readr
     - r-readxl
     - r-rstudioapi
     - r-withr
@@ -72,10 +76,12 @@ requirements:
     - r-cli
     - r-data.table
     - r-expm
+    - r-fs
     - r-gld
     - r-haven
     - r-httr
     - r-mvtnorm
+    - r-readr
     - r-readxl
     - r-rstudioapi
     - r-withr
